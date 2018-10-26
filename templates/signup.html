@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Register to Bloggy!</h1>
+    <form action= '/signup' method = 'POST'>
+        <label><h2>Username</h2></label><br>
+        <input type = 'text'  name = 'username' required/>
+        <label><h2>Password</h2></label><br>
+        <input type = 'password'  name = 'password' required/>
+        <label><h2>Verify Password</h2></label><br>
+        <input type = 'password'  name = 'verify' required/>
+        <input type = 'submit' />
+    </form>
+{% endblock %}

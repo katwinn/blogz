@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+        body {
+    background-image: url("https://66.media.tumblr.com/c286659734d9ba01e1fa57d87a27f847/tumblr_pgijk0E6sN1wny6rlo1_1280.png");
+    background-size: 100%;
+    font-family: "Raleway", Arial, sans-serif;
+    margin: 5px;
+    text-align: center
+}
+
+title {
+    background-color: rgb(255, 231, 96);
+    padding-bottom: 10px;
+    border: 4px solid rgb(0, 0, 0);
+    text-align: center
+}
+h1 {
+    background-color: rgb(255, 231, 96);
+    padding-bottom: 10px;
+    border: 4px solid rgb(0, 0, 0);
+    text-align: center
+}    
+h3 {
+    color: black;
+}
+        </style>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <div>
+            <a href= '/'><h3>Home</h3></a>
+            <a href= '/newpost'><h3>Submit an entry</h3></a>
+            <a href = '/posts'><h3>All Posts</h3></a>
+            <a href = '/login'><h3>Log in to Bloggy!</h3></a>
+            <a href = '/logout'><h3>Log out of Bloggy</h3></a>
+            
+        </div>
+
+   {% with messages = get_flashed_messages(with_categories=True) %}
+   <ul>
+   {% for category,message in messages %}
+       <li class="{{category}}">{{message}}</li>
+    {% endfor %}
+   </ul>
+    {% endwith %}
+{% block content %}
+{% endblock %}
+    </body>
+</html>

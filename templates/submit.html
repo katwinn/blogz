@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <body>
+        <div>
+        <form action = '/' method = 'POST' >
+            <label><h1>Enter a title for your post</h1></label><br>
+                <input type = 'text'  name = 'title' required/>
+                {{ error }}
+            <label><h1>Enter some text for your post</h1></label><br>
+                <input type = 'text'  name = 'text'required />
+                <input type = 'submit'/>
+                {{ error }}
+{% endblock %}

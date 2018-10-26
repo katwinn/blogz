@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+    <center><h1>Welcome to bloggy!</h1></center>
+    <center><h3 class = head>User Entries</h3></center>
+    {% for user in users %}
+    <center><strong><h3 class = format><a href= "/posts?user={{user.id}}">{{ user.username }}</h3></a></strong></center>
+    {% endfor %}
+{% endblock %}
